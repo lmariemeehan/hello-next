@@ -1,6 +1,13 @@
 import Link from 'next/link';
-import Header from '../components/Header';
-import Layout from '../components/MyLayout';
+import Layout from '../components/MyLayout'
+
+const PostLink = props => (
+	<li>
+		<Link href={`/post?title=${props.title}`}>
+			<a>{props.title}</a>
+		</Link>
+	</li>
+);
 
 export default function Index() {
 	return (
